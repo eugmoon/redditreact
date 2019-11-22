@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/redditreact/static/css/main.57be8de1.chunk.css",
+    "main.js": "/redditreact/static/js/main.83967f94.chunk.js",
+    "main.js.map": "/redditreact/static/js/main.83967f94.chunk.js.map",
+    "runtime-main.js": "/redditreact/static/js/runtime-main.7fe472b0.js",
+    "runtime-main.js.map": "/redditreact/static/js/runtime-main.7fe472b0.js.map",
+    "static/css/2.1aa0b97d.chunk.css": "/redditreact/static/css/2.1aa0b97d.chunk.css",
+    "static/js/2.b33e0bd6.chunk.js": "/redditreact/static/js/2.b33e0bd6.chunk.js",
+    "static/js/2.b33e0bd6.chunk.js.map": "/redditreact/static/js/2.b33e0bd6.chunk.js.map",
+    "index.html": "/redditreact/index.html",
+    "precache-manifest.6bd47a0305b74bc933b35d1bc19aec7e.js": "/redditreact/precache-manifest.6bd47a0305b74bc933b35d1bc19aec7e.js",
+    "service-worker.js": "/redditreact/service-worker.js",
+    "static/css/2.1aa0b97d.chunk.css.map": "/redditreact/static/css/2.1aa0b97d.chunk.css.map",
+    "static/css/main.57be8de1.chunk.css.map": "/redditreact/static/css/main.57be8de1.chunk.css.map",
+    "static/media/bootstrap.css": "/redditreact/static/media/glyphicons-halflings-regular.fa277232.woff"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.7fe472b0.js",
+    "static/css/2.1aa0b97d.chunk.css",
+    "static/js/2.b33e0bd6.chunk.js",
+    "static/css/main.57be8de1.chunk.css",
+    "static/js/main.83967f94.chunk.js"
+  ]
+}
