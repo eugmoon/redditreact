@@ -13,7 +13,6 @@ class App extends Component {
       children: [],
       isLoading: false,
       isRefresh: false,
-      subKey: '',
       subReddit: ''
     };
   }
