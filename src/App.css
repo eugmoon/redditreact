@@ -8,10 +8,10 @@
     background-color: #ccc;
     border: 2px solid #333;
     margin: 2em;
+    padding: 2em 1em 2em 1em;
 }
 .label {
     font-size: 1em;
-    margin-top: 2%;
     text-align: left;
 }
 .sub {
@@ -24,7 +24,8 @@
 }
 .thumbnail {
     background-color: #fff;
-    margin: 2%;
+    margin-left: 1em;
+    margin-right: 1em;
     width: 140px;
 }
 .title {

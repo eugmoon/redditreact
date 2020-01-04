@@ -121,12 +121,20 @@ class RedditListItem extends Component {
 
     return (
       <div className="row item">
-        <div className="col-md-4 thumbnail">
-          <img src={thumbnail} alt={title} />
-        </div>
-        <div className="col-md-8 label">
-          <span className="sub">{sub}</span><br />
-          <span className="title"><a href={link}>{title}</a></span>
+        <div className="col-md-12">
+          <div className="row">
+            <div className="col-md-4 thumbnail">
+              <img src={thumbnail} alt={title} />
+            </div>
+            <div className="col-md-8 label">
+              <span className="sub">{sub}</span><br />
+            </div>
+          </div>
+          <div className="row">
+            <div className="col-md-12">
+              <span className="title"><a href={link}>{title}</a></span>
+            </div>
+          </div>
         </div>
       </div>
     );
