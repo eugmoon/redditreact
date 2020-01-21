@@ -24,8 +24,7 @@
 }
 .thumbnail {
     background-color: #fff;
-    margin-left: 1em;
-    margin-right: 1em;
+    margin: 0.5em 0.5em;
     width: 140px;
 }
 .title {

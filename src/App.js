@@ -123,16 +123,16 @@ class RedditListItem extends Component {
       <div className="row item">
         <div className="col-md-12">
           <div className="row">
-            <div className="col-md-4 thumbnail">
-              <img src={thumbnail} alt={title} />
+            <div className="col-md-3 label">
+              <span className="sub">{sub}</span>
             </div>
-            <div className="col-md-8 label">
-              <span className="sub">{sub}</span><br />
+            <div className="col-md-9 title">
+              <a href={link}>{title}</a>
             </div>
           </div>
           <div className="row">
-            <div className="col-md-12">
-              <span className="title"><a href={link}>{title}</a></span>
+            <div className="col-md-12 thumbnail">
+              <img src={thumbnail} alt={title} />
             </div>
           </div>
         </div>
