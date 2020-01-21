@@ -11,11 +11,12 @@
     padding: 2em 1em 2em 1em;
 }
 .label {
+    color: #999;
     font-size: 1em;
     text-align: left;
 }
 .sub {
-    color: #666;
+    color: #333;
     font-style: italic;
 }
 .subreddit {
@@ -24,9 +25,15 @@
 }
 .thumbnail {
     background-color: #fff;
-    margin: 0.5em 0.5em;
+    margin: 0.5em;
     width: 140px;
 }
 .title {
     font-weight: bold;
+}
+.updown {
+    color: #fff;
+    font-size: 1em;
+    padding-top: 0.3em;
+    text-align: right;
 }
