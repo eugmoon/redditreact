@@ -1,4 +1,7 @@
 import React, { Component } from 'react';
+
+import RedditListItem from './components/RedditListItem';
+
 import './App.css';
 import './index.css';
 
@@ -52,7 +55,8 @@ class App extends Component {
 
   onSetResult = (result) => {
     const { isRefresh } = this.state;
-    if (result.Message !== "Not Found" && result.error !== 404)
+    console.log(`${result.Message}\t${result.error}`);
+    if (result.error !== 403 && result.Message !== "Not Found" && result.error !== 404)
       this.setState(this.applySetResult(result, isRefresh));
   }
 
@@ -68,6 +72,8 @@ class App extends Component {
   }
 
   render() {
+    const { children, isLoading } = this.state;
+
     return (
       <div className="App">
         <div className="subreddit">
@@ -77,8 +83,8 @@ class App extends Component {
           </form>
         </div>
         <RedditListContainer
-          container={this.state.children} 
-          isLoading={this.state.isLoading}
+          container={children} 
+          isLoading={isLoading}
           onPaginate={this.onPaginate}
         />
       </div>
@@ -106,38 +112,13 @@ class RedditListContainer extends Component {
 
     if (container == null)
       return <div className="container">No subreddit selected.</div>;
-    
-    return (
-      <div className="container">
-        {container.map(item => <RedditListItem key={item.data.id} link={'https://reddit.com' + item.data.permalink} sub={item.data.subreddit_name_prefixed} thumbnail={item.data.thumbnail} title={item.data.title} />)}
-      </div>
-    );
-  };
-}
-
-class RedditListItem extends Component {
-  render() {
-    const { link, sub, thumbnail, title } = this.props;
-
-    return (
-      <div className="row item">
-        <div className="col-md-12">
-          <div className="row">
-            <div className="col-md-3 label">
-              <span className="sub">{sub}</span>
-            </div>
-            <div className="col-md-9 title">
-              <a href={link}>{title}</a>
-            </div>
-          </div>
-          <div className="row">
-            <div className="col-md-12 thumbnail">
-              <img src={thumbnail} alt={title} />
-            </div>
-          </div>
+    else {
+      return (
+        <div className="container">
+          {container.map(item => <RedditListItem key={item.data.id} author={item.data.author} downs={item.data.downs} link={'https://reddit.com' + item.data.permalink} numcomment={item.data.num_comments} sub={item.data.subreddit_name_prefixed} thumbnail={item.data.thumbnail} title={item.data.title} ups={item.data.ups} utcdate={new Date(item.data.created_utc * 1000).toLocaleDateString() + ' ' + new Date(item.data.created_utc * 1000).toLocaleTimeString()} />)}
         </div>
-      </div>
-    );
+      );
+    }
   };
 }
 
