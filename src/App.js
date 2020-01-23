@@ -55,7 +55,7 @@ class App extends Component {
 
   onSetResult = (result) => {
     const { isRefresh } = this.state;
-    console.log(`${result.Message}\t${result.error}`);
+    
     if (result.error !== 403 && result.Message !== "Not Found" && result.error !== 404)
       this.setState(this.applySetResult(result, isRefresh));
   }
